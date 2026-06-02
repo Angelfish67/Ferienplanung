@@ -199,9 +199,6 @@ function App() {
               <h2 className="mt-2 text-4xl font-black text-slate-950">Schritt für Schritt</h2>
             </div>
 
-            <p className="max-w-xl text-slate-600">
-              Diese Schritte entsprechen dem Ablauf im BPMN-Diagramm und zeigen den Prozess in einfacher Sprache.
-            </p>
           </div>
 
           <div className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
