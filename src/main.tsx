@@ -434,35 +434,81 @@ function App() {
         </article>
       </section>
 
-      <section className="mx-auto grid max-w-[1800px] gap-8 px-6 pb-14 sm:px-10 lg:grid-cols-2 lg:px-16">
+  <section className="mx-auto max-w-[1800px] px-6 pb-14 sm:px-10 lg:px-16">
+  <article className="overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-lg">
+    <div className="bg-gradient-to-r from-blue-700 to-blue-800 px-8 py-8 text-white">
+      <p className="text-sm font-bold uppercase tracking-[0.25em] text-blue-100">
+        Abschluss
+      </p>
 
-        <article className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-lg">
-          <h2 className="text-3xl font-black text-slate-950">KI-Deklaration & Angaben</h2>
+      <h2 className="mt-2 text-4xl font-black">
+        KI-Deklaration & Angaben
+      </h2>
+    </div>
+
+    <div className="p-8">
+      <div className="grid gap-8 lg:grid-cols-[1.4fr_0.8fr]">
+        <div>
+          <p className="text-lg leading-8 text-slate-700">
+            Für die Gestaltung (CSS) und sprachliche Verbesserung
+            (Rechtschreibung, bessere Texte) dieser Webseite wurde ChatGPT als
+            Unterstützung verwendet, sowie für das Erstellen des Ablaufs in
+            Stichpunkten.
+          </p>
 
           <p className="mt-5 text-lg leading-8 text-slate-700">
-            Für die Gestaltung (CSS) und sprachliche Verbesserung (Rechtschreibung, bessere Texte) dieser Webseite wurde ChatGPT als Unterstützung verwendet, sowie für das Erstellen des Ablaufs in Stichpunkten.
+            Die fachliche Kontrolle, das Schreiben der Texte und das Erstellen
+            des BPMN wurden selbst durchgeführt.
           </p>
+        </div>
 
-          <p className="mt-4 text-lg leading-8 text-slate-700">
-            Die fachliche Kontrolle, das Schreiben der Texte und das Erstellen des BPMN wurden selbst durchgeführt.
-          </p>
+        <div className="rounded-3xl border border-slate-200 bg-slate-50 p-6">
+          <h3 className="mb-5 text-xl font-black text-slate-950">
+            Projektdaten
+          </h3>
 
-          <div className="mt-7 rounded-3xl bg-slate-50 p-5">
-            <p>
-              <strong>Name:</strong> Samira Tesan
-            </p>
-            <p className="mt-2">
-              <strong>Klasse:</strong> INA24-28a
-            </p>
-            <p className="mt-2">
-              <strong>Modul:</strong> BPMN Modellierung – 254
-            </p>
-            <p className="mt-2">
-              <strong>Datum:</strong> 02.06.2026
-            </p>
+          <div className="space-y-4">
+            <div className="rounded-2xl bg-white p-4 shadow-sm">
+              <p className="text-sm font-bold uppercase tracking-wide text-slate-500">
+                Name
+              </p>
+              <p className="mt-1 font-semibold text-slate-900">
+                Samira Tesan
+              </p>
+            </div>
+
+            <div className="rounded-2xl bg-white p-4 shadow-sm">
+              <p className="text-sm font-bold uppercase tracking-wide text-slate-500">
+                Klasse
+              </p>
+              <p className="mt-1 font-semibold text-slate-900">
+                INA24-28a
+              </p>
+            </div>
+
+            <div className="rounded-2xl bg-white p-4 shadow-sm">
+              <p className="text-sm font-bold uppercase tracking-wide text-slate-500">
+                Modul
+              </p>
+              <p className="mt-1 font-semibold text-slate-900">
+                BPMN Modellierung – 254
+              </p>
+            </div>
+
+            <div className="rounded-2xl bg-white p-4 shadow-sm">
+              <p className="text-sm font-bold uppercase tracking-wide text-slate-500">
+                Datum
+              </p>
+              <p className="mt-1 font-semibold text-slate-900">
+                02.06.2026
+              </p>
+            </div>
           </div>
-        </article>
-      </section>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
     </main>
   );
 }
