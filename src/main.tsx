@@ -157,56 +157,63 @@ function App() {
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-[1800px] gap-8 px-6 pb-10 sm:px-10 lg:grid-cols-[0.85fr_1.15fr] lg:px-16">
-        <article className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-lg">
-          <h2 className="text-3xl font-black text-slate-950">Zielsetzung</h2>
+  <section className="mx-auto grid max-w-[1800px] gap-8 px-6 pb-10 sm:px-10 lg:grid-cols-[0.85fr_1.15fr] lg:px-16">
+  <article className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-lg">
+    <h2 className="text-3xl font-black text-slate-950">Zielsetzung</h2>
 
-          <p className="mt-5 text-lg leading-8 text-slate-700">
-            Ich habe den Geschäftsprozess «Ferienplanung» gewählt, weil ich diesen Ablauf aus dem Alltag kenne und er
-            mehrere beteiligte Personen, Entscheidungen und Wiederholungen enthält.
-          </p>
+    <p className="mt-5 text-lg leading-8 text-slate-700">
+      Ich habe den Geschäftsprozess «Ferienplanung» gewählt, weil dieser Ablauf aus dem Alltag bekannt ist und trotzdem
+      viele verschiedene Schritte, Entscheidungen und beteiligte Personen enthält. Auf den ersten Blick wirkt die
+      Planung einer Reise einfach, tatsächlich müssen jedoch Termine abgestimmt, Ferien bewilligt und verschiedene
+      Möglichkeiten verglichen werden.
+    </p>
 
-          <p className="mt-4 text-lg leading-8 text-slate-700">
-            Ziel dieser Arbeit ist es, den Ablauf der Ferienplanung verständlich zu dokumentieren und die wichtigsten
-            Aktivitäten, Rollen, Entscheidungen und Nachrichtenflüsse mit BPMN darzustellen.
-          </p>
+    <p className="mt-4 text-lg leading-8 text-slate-700">
+      Ziel dieser Arbeit ist es, den Ablauf der Ferienplanung verständlich darzustellen und mit BPMN zu modellieren.
+      Dabei sollen die wichtigsten Aktivitäten, Rollen und Entscheidungen sichtbar gemacht werden, damit der gesamte
+      Prozess übersichtlich nachvollzogen werden kann.
+    </p>
 
-          <p className="mt-4 text-lg leading-8 text-slate-700">
-            Der Prozess eignet sich gut für BPMN, weil verschiedene Beteiligte zusammenarbeiten und mehrere Situationen
-            auftreten können, in denen der Ablauf zurückspringen oder angepasst werden muss.
-          </p>
-        </article>
+    <p className="mt-4 text-lg leading-8 text-slate-700">
+      Der Prozess eignet sich besonders gut für BPMN, weil mehrere Beteiligte zusammenarbeiten und verschiedene
+      Entscheidungspunkte sowie Wiederholungen auftreten können. Dadurch lassen sich die Stärken der BPMN-Modellierung
+      gut anwenden und darstellen.
+    </p>
+  </article>
 
-        <article className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-lg">
-          <h2 className="text-3xl font-black text-slate-950">Beschreibung</h2>
+  <article className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-lg">
+    <h2 className="text-3xl font-black text-slate-950">Projektbeschreibung</h2>
 
-          <div className="mt-5 space-y-4 text-lg leading-8 text-slate-700">
-            <p>
-              Am Anfang entsteht in der Familie der Wunsch, Ferien zu machen. Die Eltern überlegen zuerst, welche
-              Ferienzeit passen könnte. Danach fragen sie die Kinder und andere Mitreisende, ob sie in dieser Zeit
-              verfügbar sind.
-            </p>
+    <div className="mt-5 space-y-4 text-lg leading-8 text-slate-700">
+      <p>
+        Dieses Projekt beschäftigt sich mit der Analyse und Modellierung des Geschäftsprozesses «Ferienplanung». Ziel
+        war es, einen alltäglichen Ablauf zu untersuchen, in einzelne Prozessschritte aufzuteilen und anschliessend mit
+        BPMN grafisch darzustellen. Dabei wurde betrachtet, wie eine Familie gemeinsam Ferien plant, Termine abstimmt,
+        Ferien bewilligen lässt und schliesslich eine Reise bucht.
+      </p>
 
-            <p>
-              Die Kinder prüfen ihre Termine und geben den Eltern eine Rückmeldung. Wenn nicht alle Zeit haben, müssen
-              die Eltern einen neuen Zeitraum suchen. Wenn alle verfügbar sind, wird bei der Firma ein Ferienantrag
-              gestellt.
-            </p>
+      <p>
+        Im Mittelpunkt stehen die verschiedenen Beteiligten des Prozesses. Dazu gehören die Eltern, die Kinder, die
+        Firma des Arbeitnehmers sowie die Reisefirma. Jede dieser Parteien übernimmt bestimmte Aufgaben und beeinflusst
+        den weiteren Verlauf des Prozesses. Durch die Verwendung von Pools, Lanes, Aktivitäten, Gateways und
+        Nachrichtenflüssen werden diese Beziehungen übersichtlich dargestellt.
+      </p>
 
-            <p>
-              Die Firma prüft diesen Antrag und sendet eine Antwort zurück. Wenn der Antrag abgelehnt wird, beginnt die
-              Planung erneut. Wenn die Ferien bewilligt werden, kann die Familie mit der konkreten Reiseplanung starten.
-            </p>
+      <p>
+        Während der Modellierung wurden auch mögliche Probleme und Alternativen berücksichtigt. So kann es vorkommen,
+        dass Mitreisende (in dem Fall die Kinder) nicht verfügbar sind, ein Ferienantrag abgelehnt wird oder eine gewünschte Reise bereits
+        ausgebucht ist. In solchen Fällen muss der Prozess angepasst oder teilweise erneut durchgeführt werden. Dadurch
+        entstehen Verzweigungen und Wiederholungen, welche typisch für reale Geschäftsprozesse sind.
+      </p>
 
-            <p>
-              Danach legen die Eltern ein Budget fest, vergleichen Reiseziele, wählen Transport und Unterkunft aus und
-              senden eine Anfrage an die Reisefirma. Die Reisefirma prüft die Verfügbarkeit. Wenn alles passt, wird die
-              Reise gebucht und die Familie erhält eine Bestätigung. Wenn die Reise nicht verfügbar ist, muss eine neue
-              Anfrage gestellt werden.
-            </p>
-          </div>
-        </article>
-      </section>
+      <p>
+        Neben dem BPMN-Diagramm umfasst das Projekt eine Prozesslandkarte, eine Beschreibung der beteiligten Rollen,
+        eine Reflexion über die Bearbeitung sowie verschiedene Diskussionspunkte. Dadurch wird der Geschäftsprozess nicht
+        nur grafisch dargestellt, sondern auch fachlich erklärt und nachvollziehbar dokumentiert.
+      </p>
+    </div>
+  </article>
+</section>
 
       <section className="mx-auto max-w-[1800px] px-6 pb-10 sm:px-10 lg:px-16">
         <article className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-lg">
@@ -274,42 +281,77 @@ function App() {
         </article>
       </section>
 
-      <section className="mx-auto grid max-w-[1800px] gap-8 px-6 pb-10 sm:px-10 lg:grid-cols-2 lg:px-16">
-        <article className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-lg">
-          <h2 className="text-3xl font-black text-slate-950">Beteiligte Rollen</h2>
+<section className="mx-auto max-w-[1800px] px-6 pb-10 sm:px-10 lg:px-16">
+  <article className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-lg">
+    <div className="flex flex-col gap-3">
+      <h2 className="text-3xl font-black text-slate-950">Beteiligte Rollen</h2>
 
-          <p className="mt-4 text-lg leading-8 text-slate-600">
-            Im Diagramm sind die Aufgaben auf verschiedene Beteiligte verteilt. So sieht man klar, wer für welchen Teil
-            des Prozesses verantwortlich ist.
-          </p>
+      <p className="max-w-4xl text-lg leading-8 text-slate-600">
+        Im Diagramm sind die Aufgaben auf verschiedene Beteiligte verteilt. So sieht man klar,
+        wer für welchen Teil des Prozesses verantwortlich ist.
+      </p>
+    </div>
 
-          <div className="mt-7 grid gap-4 sm:grid-cols-2">
-            {roles.map((role) => (
-              <div key={role.title} className="rounded-3xl bg-slate-50 p-5">
-                <h3 className="text-xl font-black text-blue-800">{role.title}</h3>
-                <p className="mt-3 leading-7 text-slate-700">{role.text}</p>
-              </div>
-            ))}
+    <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+      {roles.map((role) => (
+        <div
+          key={role.title}
+          className="group rounded-3xl border border-slate-200 bg-gradient-to-b from-slate-50 to-white p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+        >
+          <div className="mb-4 inline-flex rounded-2xl bg-blue-100 px-4 py-2">
+            <h3 className="text-xl font-black text-blue-800">
+              {role.title}
+            </h3>
           </div>
-        </article>
 
-        <article className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-lg">
-          <h2 className="text-3xl font-black text-slate-950">Offene Fragen</h2>
-
-          <p className="mt-4 text-lg leading-8 text-slate-600">
-            Bei der Modellierung sind ein paar Fragen entstanden, weil ein Prozess in der Realität nicht immer genau
-            gleich abläuft.
+          <p className="leading-8 text-slate-700">
+            {role.text}
           </p>
+        </div>
+      ))}
+    </div>
+  </article>
+</section>
+        <section className="mx-auto grid max-w-[1800px] gap-8 px-6 pb-10 sm:px-10 lg:grid-cols-2 lg:px-16">
+  <article className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-lg">
+    <h2 className="text-3xl font-black text-slate-950">Offene Fragen</h2>
 
-          <ul className="mt-7 grid gap-3">
-            {questions.map((question) => (
-              <li key={question} className="rounded-2xl bg-blue-50 px-5 py-4 leading-7 text-slate-800">
-                {question}
-              </li>
-            ))}
-          </ul>
-        </article>
-      </section>
+    <p className="mt-4 text-lg leading-8 text-slate-600">
+      Bei der Modellierung sind ein paar Fragen entstanden, weil ein Prozess in der Realität nicht immer genau
+      gleich abläuft.
+    </p>
+
+    <ul className="mt-7 grid gap-3">
+      {questions.map((question) => (
+        <li key={question} className="rounded-2xl bg-blue-50 px-5 py-4 leading-7 text-slate-800">
+          {question}
+        </li>
+      ))}
+    </ul>
+  </article>
+
+  <article className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-lg">
+    <h2 className="text-3xl font-black text-slate-950">Diskussionspunkte</h2>
+
+    <div className="mt-5 space-y-4 text-lg leading-8 text-slate-700">
+      <p>
+        Ein wichtiger Diskussionspunkt ist, ob man zuerst die Ferien bei der Firma bewilligen lassen oder zuerst
+        eine Reise suchen sollte. In meinem Prozess wird zuerst die Bewilligung eingeholt. Das ist sinnvoll, weil
+        man so keine Reise plant, die später wegen der Arbeit gar nicht möglich wäre.
+      </p>
+
+      <p>
+        Ein weiterer Punkt ist die Frage, wie flexibel eine Familie bei der Ferienplanung sein muss. Wenn die Reise
+        nicht verfügbar ist, kann sie entweder eine neue Anfrage stellen oder ein anderes Reiseziel auswählen.
+      </p>
+
+      <p>
+        Zusätzlich kann diskutiert werden, ob Ferien nach dem Prinzip «Wer zuerst kommt, mahlt zuerst» bewilligt
+        werden sollten oder ob andere Kriterien wichtiger sind.
+      </p>
+    </div>
+  </article>
+</section>
 
       <section className="mx-auto max-w-[1800px] px-6 pb-10 sm:px-10 lg:px-16">
         <article className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-lg">
@@ -362,7 +404,7 @@ function App() {
 
             <p>
               Während der Arbeit habe ich gelernt, wie Geschäftsprozesse strukturiert dargestellt werden und wie BPMN
-              verwendet wird, um komplexe Abläufe übersichtlich darzustellen.
+              verwendet wird, um komplexe Abläufe übersichtlich darzustellen. Da ich bei den Nachrichtenflüssen unsicherheiten hatte, bin ich aktiv für Feedback auf die Lehrperson zugegangen.
             </p>
 
             <p>
@@ -373,7 +415,7 @@ function App() {
 
             <p>
               Rückblickend hätte ich im BPMN noch verschiedene Farben benutzen können, jedoch gab es dies im Camunda
-              Modeler nicht.
+              Modeler nicht. Damit hätte ich die Kern-, Führungs- und Unterstützungsprozesse noch grafisch unterscheiden können. Bei der Zeitplanung würde ich zukünftig verändern, früher zu beginnen.
             </p>
           </div>
         </article>
@@ -393,38 +435,16 @@ function App() {
       </section>
 
       <section className="mx-auto grid max-w-[1800px] gap-8 px-6 pb-14 sm:px-10 lg:grid-cols-2 lg:px-16">
-        <article className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-lg">
-          <h2 className="text-3xl font-black text-slate-950">Diskussionspunkte</h2>
-
-          <div className="mt-5 space-y-4 text-lg leading-8 text-slate-700">
-            <p>
-              Ein wichtiger Diskussionspunkt ist, ob man zuerst die Ferien bei der Firma bewilligen lassen oder zuerst
-              eine Reise suchen sollte. In meinem Prozess wird zuerst die Bewilligung eingeholt. Das ist sinnvoll, weil
-              man so keine Reise plant, die später wegen der Arbeit gar nicht möglich wäre.
-            </p>
-
-            <p>
-              Ein weiterer Punkt ist die Frage, wie flexibel eine Familie bei der Ferienplanung sein muss. Wenn die Reise
-              nicht verfügbar ist, kann sie entweder eine neue Anfrage stellen oder ein anderes Reiseziel auswählen.
-            </p>
-
-            <p>
-              Zusätzlich kann diskutiert werden, ob Ferien nach dem Prinzip «Wer zuerst kommt, mahlt zuerst» bewilligt
-              werden sollten oder ob andere Kriterien wichtiger sind.
-            </p>
-          </div>
-        </article>
 
         <article className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-lg">
           <h2 className="text-3xl font-black text-slate-950">KI-Deklaration & Angaben</h2>
 
           <p className="mt-5 text-lg leading-8 text-slate-700">
-            Für die Gestaltung und sprachliche Verbesserung dieser Webseite wurde ChatGPT als Unterstützung verwendet.
-            Die Inhalte wurden kontrolliert, angepasst und auf mein BPMN-Diagramm abgestimmt.
+            Für die Gestaltung (CSS) und sprachliche Verbesserung (Rechtschreibung, bessere Texte) dieser Webseite wurde ChatGPT als Unterstützung verwendet, sowie für das Erstellen des Ablaufs in Stichpunkten.
           </p>
 
           <p className="mt-4 text-lg leading-8 text-slate-700">
-            Die fachliche Kontrolle, die endgültige Auswahl der Inhalte und die finale Abgabe wurden selbst durchgeführt.
+            Die fachliche Kontrolle, das Schreiben der Texte und das Erstellen des BPMN wurden selbst durchgeführt.
           </p>
 
           <div className="mt-7 rounded-3xl bg-slate-50 p-5">
