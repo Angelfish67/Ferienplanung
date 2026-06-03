@@ -148,7 +148,7 @@ function App() {
         <div className="rounded-[2rem] border border-slate-200 bg-white p-4 shadow-xl shadow-slate-200/70">
           <div className="overflow-x-auto rounded-[1.5rem] bg-slate-50">
             <img
-              src="./image.png"
+              src="./image.png?v=2"
               alt="BPMN Diagramm Ferienplanung"
               className="max-w-none rounded-[1.5rem]"
               style={{ minWidth: '2200px' }}
