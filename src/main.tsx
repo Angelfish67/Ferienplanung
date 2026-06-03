@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 
 const steps = [
   'Der Ferienwunsch entsteht in der Familie.',
   'Die Eltern prüfen, welche Ferienzeit möglich wäre.',
-  'Die Eltern fragen die Kinder und Mitreisenden nach ihrer Verfügbarkeit.',
+  'Die Eltern fragen die Kinder (Mitreisenden) nach ihrer Verfügbarkeit.',
   'Die Kinder prüfen ihre Termine und geben eine Rückmeldung.',
   'Wenn nicht alle verfügbar sind, wird ein neuer Zeitraum gesucht.',
   'Wenn alle verfügbar sind, fragen die Eltern bei der Firma Ferien an.',
@@ -19,6 +19,24 @@ const steps = [
   'Wenn die Reise verfügbar ist, wird sie gebucht.',
   'Wenn die Reise nicht verfügbar ist, muss eine neue Anfrage gestellt werden.',
   'Am Ende sind die Ferien gebucht.',
+];
+
+const flowText = [
+  `Der Prozess beginnt damit, dass in der Familie der Wunsch entsteht, gemeinsam Ferien zu machen. Die Eltern übernehmen zuerst die Planung und überlegen, welcher Zeitraum grundsätzlich möglich wäre. Dabei müssen sie berücksichtigen, wann Schulferien sind, wann die Familie frei hat und welcher Zeitraum für alle Beteiligten sinnvoll wäre.`,
+
+  `Nachdem ein möglicher Zeitraum gefunden wurde, fragen die Eltern die Kinder (Mitreisenden) nach ihrer Verfügbarkeit. Die Kinder prüfen ihre eigenen Termine, zum Beispiel Schule, Prüfungen, Hobbies oder andere Verpflichtungen. Danach geben sie den Eltern eine Rückmeldung, ob sie in diesem Zeitraum mitreisen können.`,
+
+  `Falls nicht alle Personen verfügbar sind, kann die Ferienplanung nicht direkt weitergeführt werden. In diesem Fall suchen die Eltern einen neuen Zeitraum und fragen die Kinder erneut an. Dadurch entsteht eine Wiederholung im Prozess, weil die Terminabstimmung so lange angepasst wird, bis ein passender Zeitraum gefunden wurde.`,
+
+  `Wenn alle Beteiligten verfügbar sind, stellen die Eltern bei der Firma einen Ferienantrag. Die Firma prüft, ob die Ferien in diesem Zeitraum bewilligt werden können. Dabei kann zum Beispiel eine Rolle spielen, ob genügend Personal vorhanden ist oder ob bereits andere Mitarbeitende Ferien eingetragen haben.`,
+
+  `Lehnt die Firma den Ferienantrag ab, muss die Familie wieder zurück zur Terminplanung. Die Eltern suchen dann einen neuen Zeitraum und stimmen diesen erneut mit den Kindern ab. Wird der Antrag jedoch bewilligt, kann die Familie mit der konkreten Reiseplanung beginnen.`,
+
+  `Nach der Bewilligung legen die Eltern ein Budget fest. Anschliessend vergleichen sie verschiedene Reiseziele und überlegen, welche Art von Ferien zur Familie passt. Danach wählen sie Transport und Unterkunft aus, zum Beispiel Zug, Flug, Auto, Hotel, Ferienwohnung oder Campingplatz.`,
+
+  `Sobald eine passende Reise gefunden wurde, senden die Eltern eine Reiseanfrage an die Reisefirma. Die Reisefirma prüft, ob die gewünschte Reise noch verfügbar ist. Wenn die Reise nicht verfügbar ist, muss eine neue Anfrage gestellt werden.`,
+
+  `Wenn die Reise verfügbar ist, wird sie gebucht. Danach erhält die Familie eine Buchungsbestätigung. Der Prozess endet, sobald die Ferien bewilligt und die Reise erfolgreich gebucht wurden.`,
 ];
 
 const roles = [
@@ -57,8 +75,7 @@ const processMap = [
       'Verfügbarkeit der Mitreisenden prüfen',
       'Ferien bei der Firma beantragen',
       'Reise planen',
-      'Reiseanfrage senden',
-      'Reise buchen',
+      'Reiseanfrage senden/buchen',
     ],
   },
   {
@@ -66,9 +83,9 @@ const processMap = [
     items: [
       'Kalender prüfen',
       'Mitreisende kontaktieren',
-      'Ferienantrag bearbeiten',
-      'Reiseverfügbarkeit prüfen',
-      'Buchungsbestätigung versenden',
+      'Ferienantrag bearbeiten (Firma)',
+      'Reiseverfügbarkeit prüfen (Reisefirma)',
+      'Buchungsbestätigung versenden (Reisefirma)',
     ],
   },
 ];
@@ -96,6 +113,8 @@ const journal = [
 ];
 
 function App() {
+  const [viewMode, setViewMode] = useState<'text' | 'steps'>('text');
+
   return (
     <main className="min-h-screen bg-[#f5f7fb] text-slate-900">
       <section className="w-full border-b border-slate-200 bg-white">
@@ -196,21 +215,62 @@ function App() {
               <p className="text-sm font-bold uppercase tracking-[0.25em] text-blue-700">
                 Ablauf
               </p>
-              <h2 className="mt-2 text-4xl font-black text-slate-950">Schritt für Schritt</h2>
+              <h2 className="mt-2 text-4xl font-black text-slate-950">
+                Ablauf der Ferienplanung
+              </h2>
+              <p className="mt-3 max-w-3xl text-lg leading-8 text-slate-600">
+                Hier kann zwischen einer ausführlichen Beschreibung als Fliesstext und einer übersichtlichen Schrittfolge
+                gewechselt werden.
+              </p>
             </div>
 
+            <div className="flex rounded-2xl bg-slate-100 p-1">
+              <button
+                type="button"
+                onClick={() => setViewMode('text')}
+                className={`rounded-xl px-5 py-3 text-sm font-black transition ${
+                  viewMode === 'text'
+                    ? 'bg-blue-700 text-white shadow-md'
+                    : 'text-slate-600 hover:bg-white hover:text-slate-950'
+                }`}
+              >
+                Fliesstext
+              </button>
+
+              <button
+                type="button"
+                onClick={() => setViewMode('steps')}
+                className={`rounded-xl px-5 py-3 text-sm font-black transition ${
+                  viewMode === 'steps'
+                    ? 'bg-blue-700 text-white shadow-md'
+                    : 'text-slate-600 hover:bg-white hover:text-slate-950'
+                }`}
+              >
+                Steps
+              </button>
+            </div>
           </div>
 
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-            {steps.map((step, index) => (
-              <div key={step} className="rounded-3xl border border-slate-200 bg-slate-50 p-5">
-                <div className="mb-4 grid size-11 place-items-center rounded-2xl bg-blue-700 font-black text-white">
-                  {index + 1}
-                </div>
-                <p className="leading-7 text-slate-700">{step}</p>
+          {viewMode === 'text' ? (
+            <div className="mt-8 rounded-[1.5rem] border border-slate-200 bg-slate-50 p-7">
+              <div className="space-y-5 text-lg leading-9 text-slate-700">
+                {flowText.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
               </div>
-            ))}
-          </div>
+            </div>
+          ) : (
+            <div className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+              {steps.map((step, index) => (
+                <div key={step} className="rounded-3xl border border-slate-200 bg-slate-50 p-5">
+                  <div className="mb-4 grid size-11 place-items-center rounded-2xl bg-blue-700 font-black text-white">
+                    {index + 1}
+                  </div>
+                  <p className="leading-7 text-slate-700">{step}</p>
+                </div>
+              ))}
+            </div>
+          )}
         </article>
       </section>
 
@@ -312,7 +372,8 @@ function App() {
             </p>
 
             <p>
-              Rückblickend hätte ich im BPMN noch verschiedene Farben benutzen können, jedoch gab es dies im Camuda nicht.
+              Rückblickend hätte ich im BPMN noch verschiedene Farben benutzen können, jedoch gab es dies im Camunda
+              Modeler nicht.
             </p>
           </div>
         </article>
